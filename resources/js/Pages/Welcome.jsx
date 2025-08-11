@@ -6,7 +6,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         <>
             <Head title="Inicio Carrito"/>
             <div className='text-center text-green-500 text-3xl'>
-                Hola Edgar aca empieza el trabajo
+                Hola Edgar aca veraz los avances del proyecto
             </div>
 
         </>
