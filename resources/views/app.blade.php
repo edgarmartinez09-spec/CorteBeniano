@@ -9,9 +9,9 @@
             <link rel="icon" href="{{ asset('logo.png') }}" type="image/png">
 
             {{-- Open Graph para redes sociales --}}
-            <meta property="og:title" content="Empresa De Frutas - Valle de Mizque" />
-            <meta property="og:description" content="Frutas frescas, naturales y de calidad desde el Valle de Mizque." />
-            <meta property="og:image" content="https://rubenempresa-production.up.railway.app/images/preview.jpg" />
+            <meta property="og:title" content="Carniceria Corte Beniano" />
+            <meta property="og:description" content="Cortes de Calidad Hechos Con Amor" />
+            <meta property="og:image" content="https://edgartrabajo-production.up.railway.app//images/preview.jpg" />
             <meta property="og:url" content="{{ url('/') }}" />
             <meta property="og:type" content="website" />
 
