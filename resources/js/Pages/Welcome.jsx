@@ -5,6 +5,9 @@ import RectanguloLayout from "@/Layouts/RectanguloLayout";
 import Porqueescoger from '@/Components/Porqueescoger';
 import Productoscertificados from '@/Components/Productoscertificados';
 import Clientes from '@/Components/ClientesSatisfechos';
+import Comentarios from '@/Components/Comentarios';
+import Corte from '@/Components/AcercaDelCorte';
+import Contact from "@/Components/Contacto";
 
 export default function Welcome() {
     return (
@@ -32,16 +35,22 @@ export default function Welcome() {
             </RectanguloLayout>
 
             <RectanguloLayout background="">
-
+            <Comentarios/>
             </RectanguloLayout>
 
-
-
-
-
+            <EnvioGratisHeader background='#152636'/>
 
             <RectanguloLayout background="#962b2b">
-            <Productoscertificados/>
+            <Corte/>
+            </RectanguloLayout>
+
+            <RectanguloLayout background="">
+            <LogoConVideo/>
+            </RectanguloLayout>
+
+            
+            <RectanguloLayout background="#962b2b">
+            <Contact/>
             </RectanguloLayout>
             
         </>
