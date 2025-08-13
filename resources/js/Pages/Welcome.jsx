@@ -30,6 +30,10 @@ export default function Welcome() {
             <RectanguloLayout background="#962b2b">
             <Clientes/>
             </RectanguloLayout>
+
+            <RectanguloLayout background="">
+            <Productoscertificados/>
+            </RectanguloLayout>
             
         </>
     );

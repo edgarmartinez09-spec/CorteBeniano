@@ -1,5 +1,6 @@
 import BotonComprarAhora from "@/Components/BotonComprarAhora";
 import Reproductor from "@/Components/Reproductor";
+import AnimatedSection from "@/Components/Animaciones";
 
 export default function Clientes() {
   const clientes = [
@@ -10,18 +11,21 @@ export default function Clientes() {
   ];
 
   return (
-    <div className=" min-h-screen w-full flex items-center justify-center">
+    <div className="min-h-screen w-full flex items-center justify-center">
       <div className="flex flex-col items-center text-center text-white max-w-6xl w-full px-4 py-10">
+        
         {/* Título */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
-          Clientes satisfechos
-        </h2>
+        <AnimatedSection animationType="up" delay={0}>
+          <h2 className="text-[50px] md:text-[50px] font-bold mb-20">
+            Clientes satisfechos
+          </h2>
+        </AnimatedSection>
 
-        {/* Grid de clientes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+        {/* Grid 2x2 de clientes, bolitas juntas */}
+        <div className="grid grid-cols-2 -space-x-4 -space-y-4 sm:-space-x-6 sm:-space-y-6">
           {clientes.map((c, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden">
+            <AnimatedSection key={i} animationType="up" delay={0.2 * i} className="flex justify-center">
+              <div className="relative w-40 sm:w-48 h-40 sm:h-48 rounded-full overflow-hidden">
                 {c.tipo === "img" ? (
                   <img
                     src={c.src}
@@ -29,7 +33,7 @@ export default function Clientes() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <Reproductor link={c.src} />
+                  <Reproductor src={c.src} />
                 )}
                 <span
                   className={`absolute bottom-2 left-2 px-3 py-1 rounded-md text-sm font-bold ${c.color}`}
@@ -37,14 +41,15 @@ export default function Clientes() {
                   {c.user}
                 </span>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Botón comprar ahora */}
-        <div className="flex flex-col items-center gap-3">
+        <AnimatedSection animationType="up" delay={0.8} className="flex flex-col items-center gap-3 mt-10">
           <BotonComprarAhora />
-        </div>
+        </AnimatedSection>
+
       </div>
     </div>
   );
