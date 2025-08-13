@@ -1,6 +1,6 @@
 import EnvioGratisHeader from '@/Components/EnviogratisHeader';
 import LogoConVideo from '@/Components/LogoConVideo';
-import { Head} from '@inertiajs/react';
+import { Head } from '@inertiajs/react';
 import RectanguloLayout from "@/Layouts/RectanguloLayout";
 import Porqueescoger from '@/Components/Porqueescoger';
 import Productoscertificados from '@/Components/Productoscertificados';
@@ -12,47 +12,66 @@ import Contact from "@/Components/Contacto";
 export default function Welcome() {
     return (
         <>
-            <Head title="Corte Beniano"/>
+            <Head title="Corte Beniano" />
 
-            <EnvioGratisHeader background="#962b2b"/>
+            <EnvioGratisHeader background="#962b2b" />
 
             <RectanguloLayout background="#f0efef">
-            <LogoConVideo/>
+                <LogoConVideo logoSrc="https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png">
+                    <p className="text-lg sm:text-xl md:text-[30px]  font-montserrat text-gray-800 leading-snug sm:leading-tight max-w-[600px] mx-auto">
+                        Compra tus productos cárnicos desde<br />
+                        casa de manera sencilla, rápida y segura<br />
+                        en <span className="font-bold">Cochabamba, Bolivia.</span>
+                    </p>
+                </LogoConVideo>
+
             </RectanguloLayout>
-            
+
             <RectanguloLayout background="#962b2b">
-            <Porqueescoger/>
+                <Porqueescoger />
             </RectanguloLayout>
 
             <RectanguloLayout background="">
-            <Productoscertificados/>
+                <Productoscertificados />
             </RectanguloLayout>
-            
-            <EnvioGratisHeader background='#152636'/>
+
+            <EnvioGratisHeader background='#152636' />
 
             <RectanguloLayout background="#962b2b">
-            <Clientes/>
+                <Clientes />
             </RectanguloLayout>
 
             <RectanguloLayout background="">
-            <Comentarios/>
+                <Comentarios />
             </RectanguloLayout>
 
-            <EnvioGratisHeader background='#152636'/>
+            <EnvioGratisHeader background='#152636' />
 
             <RectanguloLayout background="#962b2b">
-            <Corte/>
+                <Corte />
             </RectanguloLayout>
 
             <RectanguloLayout background="">
-            <LogoConVideo/>
+                <LogoConVideo logoSrc="https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-snug sm:leading-tight max-w-[600px] mx-auto">
+                        ¡LA CARNE MÁS FRESCA A SOLO UN CLIC DE DISTANCIA!
+                    </h2>
+
+                    <ul className="text-lg sm:text-xl md:text-2xl text-gray-800 list-disc list-inside font-montserrat space-y-2 max-w-[600px] mx-auto text-left">
+                        <li>Compra 100% segura <strong>¡Paga al recibir!</strong></li>
+                        <li>Descuento EXCLUSIVO por comprar hoy: <strong>10% OFF</strong></li>
+                        <li>Delivery <strong>GRATIS</strong></li>
+                        <li>Promoción solo para las primeras <strong>50 personas</strong></li>
+                    </ul>
+                </LogoConVideo>
+
             </RectanguloLayout>
 
-            
+
             <RectanguloLayout background="#962b2b">
-            <Contact/>
+                <Contact />
             </RectanguloLayout>
-            
+
         </>
     );
 }
