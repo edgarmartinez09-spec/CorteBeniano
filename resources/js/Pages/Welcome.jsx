@@ -2,6 +2,7 @@ import EnvioGratisHeader from '@/Components/EnviogratisHeader';
 import LogoConVideo from '@/Components/LogoConVideo';
 import { Head} from '@inertiajs/react';
 import RectanguloLayout from "@/Layouts/RectanguloLayout";
+import Porqueescoger from '@/Components/Porqueescoger';
 
 export default function Welcome() {
 
@@ -15,6 +16,9 @@ export default function Welcome() {
             <LogoConVideo/>
             </RectanguloLayout>
             
+            <RectanguloLayout background="#962b2b">
+            <Porqueescoger/>
+            </RectanguloLayout>
         </>
     );
 }

@@ -20,7 +20,7 @@ export default function LogoConVideo() {
                 </p>
 
                 <Link
-                    href="/ruta-de-compra"
+                    href="/compra"
                     className="bg-[#8B1C1C] hover:bg-[#6e1515]   text-white font-bold tracking-widest py-3 sm:py-4 px-8 sm:px-12 rounded-full transition text-base sm:text-lg md:text-[25px] font-montserrat"
                 >
                     <span className="border-b border-white">

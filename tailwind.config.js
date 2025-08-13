@@ -20,7 +20,8 @@ export default {
         rojo: '#962b2b',           // Rojo
         marronOscuro: '#1e1a17',   // Marrón oscuro apagado
         rojoApagado: '#bea4a3',    // Rojo apagado
-        gris: '#696663',           // Gris medio
+        gris: '#696663', 
+        celesteoscuro: '#152636',           // Gris medio
       },
     },
   },
