@@ -98,7 +98,7 @@ export default function VideoPlayer({ src, className = "" }) {
       >
         {playing ? <FaPause /> : <FaPlay />}
       </button>
-// Dentro del return, reemplaza la parte de controles inferiores por esto:
+
 <div
   className={`absolute ${smallMode ? "top-32" : "bottom-2"} left-0 right-0 flex items-center gap-3 px-4 transition-opacity duration-300
   ${hover ? "opacity-100" : "opacity-0"}`}

@@ -32,6 +32,15 @@ export default function Welcome() {
             </RectanguloLayout>
 
             <RectanguloLayout background="">
+
+            </RectanguloLayout>
+
+
+
+
+
+
+            <RectanguloLayout background="#962b2b">
             <Productoscertificados/>
             </RectanguloLayout>
             
