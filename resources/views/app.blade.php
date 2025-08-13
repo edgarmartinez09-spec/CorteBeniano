@@ -11,7 +11,7 @@
             {{-- Open Graph para redes sociales --}}
             <meta property="og:title" content="Carniceria Corte Beniano" />
             <meta property="og:description" content="Cortes de Calidad Hechos Con Amor" />
-            <meta property="og:image" content="https://edgartrabajo-production.up.railway.app/images/preview.jpg" />
+            <meta property="og:image" content="https://edgartrabajo-production.up.railway.app/images/preview.png" />
             <meta property="og:url" content="{{ url('/') }}" />
             <meta property="og:type" content="website" />
 
