@@ -4,8 +4,7 @@ import AnimacionFondo from "@/Components/AnimacionTelefonoAtras";
 export default function Telefono() {
   return (
     <div className="relative flex justify-center items-center w-full mt-6 md:mt-0">
-      {/* Fondo animado */}
-      <AnimacionFondo />
+   
       {/* Contenedor del teléfono */}
       <div className="relative w-[80%] max-w-[300px] min-w-[200px] aspect-[9/16] z-10">
         {/* Pantalla interna */}
