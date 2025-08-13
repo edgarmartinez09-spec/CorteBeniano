@@ -30,7 +30,6 @@ export default function LogoConVideo() {
             </AnimatedSection>
 
             {/* DERECHA */}
-            {/* DERECHA */}
             <AnimatedSection
                 animationType="up"
                 className="w-full md:w-1/2 flex items-center justify-center text-center space-y-4 md:space-y-6">
