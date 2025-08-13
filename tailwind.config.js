@@ -10,13 +10,19 @@ export default {
         './resources/js/**/*.jsx',
     ],
 
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
+   theme: {
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],//letras de la pagina original
+      },
+      colors: {
+        grisClaro: '#f0efef',      // Gris claro
+        rojo: '#962b2b',           // Rojo
+        marronOscuro: '#1e1a17',   // Marrón oscuro apagado
+        rojoApagado: '#bea4a3',    // Rojo apagado
+        gris: '#696663',           // Gris medio
+      },
     },
-
+  },
     plugins: [forms],
 };

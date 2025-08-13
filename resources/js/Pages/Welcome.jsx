@@ -1,14 +1,14 @@
+import EnvioGratisHeader from '@/Components/EnviogratisHeader';
+import LogoConVideo from '@/Components/LogoConVideo';
 import { Head} from '@inertiajs/react';
 
-export default function Welcome({ auth, laravelVersion, phpVersion }) {
+export default function Welcome() {
     
     return (
         <>
-            <Head title="Inicio Carrito"/>
-            <div className='text-center text-green-500 text-3xl'>
-                Hola Edgar aca veraz los avances del proyecto
-            </div>
-
+            <Head title="Corte Beniano"/>
+            <EnvioGratisHeader background="#962b2b"/>
+            <LogoConVideo/>
         </>
     );
 }
