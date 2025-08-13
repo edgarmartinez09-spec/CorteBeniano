@@ -8,7 +8,7 @@ export default function LogoConVideo() {
             {/* IZQUIERDA: Logo + texto + botón */}
             <AnimatedSection animationType="up" className="w-full md:w-1/2 flex flex-col items-center text-center space-y-4 md:space-y-6 max-w-[600px] md:max-w-none flex-shrink-0 md:justify-center md:h-full overflow-auto">
                 <img
-                    src="/images/logo.png"
+                    src="https://res.cloudinary.com/dnbklbswg/image/upload/v1755060860/Dise%C3%B1o_sin_t%C3%ADtulo_4_xsamuc.png"
                     alt="logo corte beniano"
                     className="w-full max-w-[360px] sm:max-w-[450px] md:max-w-[500px] h-auto"
                 />
