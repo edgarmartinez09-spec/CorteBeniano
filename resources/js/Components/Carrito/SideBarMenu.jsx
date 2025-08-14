@@ -15,13 +15,9 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
         transition={{ type: "tween", duration: 0.4 }}
         className="fixed top-0 left-0 w-full md:w-72 h-full bg-white shadow-lg z-50 overflow-auto"
       >
-        {/* Encabezado */}
-        <div className="flex justify-between items-center px-4 py-3 border-b sticky top-0 bg-white z-50">
-          <CloseButton onClick={onMenuClose} menuOpen={menuOpen} />
-        </div>
-
+      
         {/* Navegación */}
-        <nav className="flex flex-col p-4 gap-2 flex-1">
+        <nav className="flex flex-col p-4 pt-20 gap-2 flex-1">
           <a
             href="#"
             className="py-2 px-2 rounded hover:bg-gray-200 transition-colors"

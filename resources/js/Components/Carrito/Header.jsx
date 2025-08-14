@@ -5,7 +5,7 @@ const menuButtonAnimations = {
   open: [
     { rotate: 48, y: 0 },
     { opacity: 0 },
-    { rotate: -45, y: -5 },
+    { rotate: -45, y: -4 },
   ],
   closed: [
     { rotate: 0, y: -4 },
