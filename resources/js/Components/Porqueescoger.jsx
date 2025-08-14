@@ -1,7 +1,11 @@
-import AnimatedSection from "@/Components/Animaciones"; // tu componente de animaciones
-import BotonComprarAhora from "@/Components/BotonComprarAhora";
+// Importamos componentes reutilizables
+import AnimatedSection from "@/Components/Animaciones"; // Componente que maneja animaciones de entrada
+import BotonComprarAhora from "@/Components/BotonComprarAhora"; // Botón personalizado con texto adicional
 
+// Componente principal que explica por qué elegir "El Corte Beniano"
 export default function Porqueescoger() {
+
+    // Array de logos con su respectiva descripción. Se usarán para mostrar 3 secciones.
     const logosArriba = [
         { 
             src: "https://res.cloudinary.com/dnbklbswg/image/upload/v1755141898/logo-izquierda_djraar.png",
@@ -20,30 +24,33 @@ export default function Porqueescoger() {
     return (
         <div className="w-full flex flex-col items-center px-4 md:px-16 pt-4 md:pt-6 ">
 
-            {/* Título animado */}
+            {/* Título animado hacia arriba */}
             <AnimatedSection animationType="up" delay={0}>
                 <h2 className="text-white text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">
                     ¿Por qué elegir <br /> El Corte Beniano?
                 </h2>
             </AnimatedSection>
 
-            {/* Logos con descripción animados */}
+            {/* Grid con los logos y sus descripciones */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-6xl">
                 {logosArriba.map((logo, index) => (
                     <AnimatedSection
                         key={index}
-                        animationType={index % 2 === 0 ? "left" : "right"}
-                        delay={0.2 * index} // se van animando con retraso
+                        animationType={index % 2 === 0 ? "left" : "right"} // alterna animación izquierda/derecha
+                        delay={0.2 * index} // agrega retraso progresivo para animación
                     >
                         <div className="flex flex-col items-center gap-5">
+                            
+                            {/* Contenedor del logo en círculo */}
                             <div className="flex items-center justify-center rounded-full w-40 h-40 md:w-48 md:h-48 bg-[#142238]">
                                 <img
                                     src={logo.src}
                                     alt={`Logo ${index + 1}`}
-                                    className="w-[154px] h-[113px] object-contain"
+                                    className="w-[154px] h-[113px] object-contain" // mantiene proporción de la imagen
                                 />
                             </div>
 
+                            {/* Contenedor de la descripción con borde redondeado */}
                             <div className="w-full border-2 border-white rounded-[40px] p-4 flex-1">
                                 <p className="text-white text-sm md:text-base text-center leading-relaxed">
                                     {logo.descripcion}
@@ -54,10 +61,11 @@ export default function Porqueescoger() {
                 ))}
             </div>
 
+            {/* Botón de llamada a la acción */}
             <BotonComprarAhora
                 buttonText="COMPRAR AHORA"
                 buttonHref="/comprar"
-                showText={true}
+                showText={true} // indica que se mostrará texto adicional debajo del botón
                 textContent="Recibe un DESCUENTO y DELIVERY GRATIS"
                 textColor="text-white"
             />

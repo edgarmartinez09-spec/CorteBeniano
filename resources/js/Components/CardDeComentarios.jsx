@@ -1,10 +1,12 @@
-import Users from '@/Components/FotosUsuarios';
-import AnimatedSection from '@/Components/Animaciones';
+import Users from '@/Components/FotosUsuarios';      // Componente que muestra foto + nombre del usuario
+import AnimatedSection from '@/Components/Animaciones'; // Componente para animar la aparición de cada tarjeta
 
 export default function CardComentarios() {
+    // Estilos reutilizables para la tarjeta y el texto
     const cardStyle = "border-2 border-black flex flex-col justify-between max-w-[350px] w-full sm:w-[350px] rounded-[40px] p-6 sm:p-10 min-h-[300px]";
     const textStyle = "text-base sm:text-[20px] mb-4 text-start";
 
+    // Lista de comentarios con texto, nombre y foto
     const comentarios = [
         {
             texto: `“Pedir nunca fue tan sencillo! Los productos son excelentes y me llegaron en menos de 30 minutos, y la carne es espectacular, muy recomendable!”`,
@@ -23,20 +25,25 @@ export default function CardComentarios() {
         }
     ];
 
-    // Animaciones cíclicas
+    // Tipos de animación para aplicar en forma cíclica a cada tarjeta
     const animaciones = ["up", "right", "left"];
 
     return (
+        // Contenedor que organiza las tarjetas con espacio y alineación
         <div className="flex flex-wrap justify-center gap-6 mt-10 items-stretch">
             {comentarios.map((item, idx) => (
                 <AnimatedSection
                     key={idx}
-                    animationType={animaciones[idx % animaciones.length]}
-                    delay={idx * 0.3}
-                    className="w-full sm:w-auto flex" // flex para que stretch funcione
+                    animationType={animaciones[idx % animaciones.length]} // Alterna animaciones
+                    delay={idx * 0.3} // Escalonado de aparición
+                    className="w-full sm:w-auto flex" // Flex para que "stretch" funcione
                 >
+                    {/* Tarjeta individual */}
                     <div className={`${cardStyle} h-full`}>
+                        {/* Texto del comentario */}
                         <p className={textStyle}>{item.texto}</p>
+
+                        {/* Nombre y foto del usuario, si existen */}
                         {item.nombre && item.src && (
                             <div className="mt-4">
                                 <Users nombre={item.nombre} src={item.src} />

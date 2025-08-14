@@ -1,33 +1,50 @@
-import AnimatedSection from "@/Components/Animaciones"; // tu componente de animaciones
-import { Link } from "@inertiajs/react";
+import AnimatedSection from "@/Components/Animaciones"; // Componente que aplica animaciones al entrar en pantalla
+import { Link } from "@inertiajs/react"; // Enlaces para navegación con Inertia.js
 
 export default function AnimatedButtonWithText({
-  buttonText = "COMPRA AHORA",
-  buttonHref = "/comprar",
-  buttonDelay = 0.8,
-  showText = true,
-  textContent = "Recibe un DESCUENTO y DELIVERY GRATIS",
-  textDelay = 1,
-  textColor = "text-white", // nuevo prop para color del texto
+  // Props con valores por defecto
+  buttonText = "COMPRA AHORA",              // Texto dentro del botón
+  buttonHref = "/comprar",                  // Enlace al que redirige el botón
+  buttonDelay = 0.8,                         // Retraso de animación del botón
+  showText = true,                           // Si se muestra o no el texto debajo
+  textContent = "Recibe un DESCUENTO y DELIVERY GRATIS", // Texto que aparece debajo del botón
+  textDelay = 1,                             // Retraso de animación para el texto
+  textColor = "text-white",                  // Color del texto (clase Tailwind)
 }) {
   return (
     <>
+      {/* Contenedor principal: contenido centrado en columna */}
       <div className="flex flex-col items-center justify-center w-full">
-        {/* Botón animado */}
-        <AnimatedSection animationType="fit" delay={buttonDelay} className="mt-12 md:mt-16">
+        
+        {/* BOTÓN animado */}
+        <AnimatedSection 
+          animationType="fit"                 // Tipo de animación (efecto "ajuste/aparición")
+          delay={buttonDelay}                  // Retraso antes de que aparezca
+          className="mt-12 md:mt-16"            // Margen superior
+        >
           <Link
-            href={buttonHref}
-            className="bg-celesteoscuro text-white px-24 md:px-32 py-3 md:py-5 rounded-full font-bold hover:bg-[#0f1a2b] transition-all whitespace-nowrap"
+            href={buttonHref}                  // URL de destino
+            className="bg-celesteoscuro text-white 
+                       px-24 md:px-32 py-3 md:py-5 
+                       rounded-full font-bold 
+                       hover:bg-[#0f1a2b]        // Cambio de color al pasar el mouse
+                       transition-all 
+                       whitespace-nowrap"       // Evita que el texto se corte en varias líneas
           >
+            {/* Subrayado solo en la parte inferior */}
             <span className="border-b border-white">
               {buttonText}
             </span>
           </Link>
         </AnimatedSection>
 
-        {/* Texto animado opcional */}
-        {showText && (
-          <AnimatedSection animationType="up" delay={textDelay} className="mt-6">
+        {/* TEXTO animado opcional */}
+        {showText && ( // Solo se renderiza si showText es true
+          <AnimatedSection 
+            animationType="up"                 // Animación desde abajo
+            delay={textDelay}                   // Retraso antes de mostrar el texto
+            className="mt-6"                    // Margen superior
+          >
             <p className={`${textColor} text-center font-extrabold text-sm md:text-base`}>
               {textContent}
             </p>

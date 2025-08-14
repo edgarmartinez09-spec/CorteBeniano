@@ -24,7 +24,7 @@ export default function EnvioGratisHeader({ background = "#8B2B28" }) {
       <p
         className="text-[9px]  uppercase font-montserrat font-extrabold tracking-[2px] text-white text-center"
         /*
-          className:
+          className: 
           - text-[7px] → tamaño de texto pequeño
           - uppercase → convierte el texto a mayúsculas.
           - font-montserrat → usa la fuente "Montserrat".

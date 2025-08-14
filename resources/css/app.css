@@ -1,25 +1,42 @@
+/* Importamos las directivas de Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Importamos fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&display=swap');
 
+/* ==============================
+   Animaciones de scroll personalizadas
+   ============================== */
+
+/* Animación hacia arriba */
 .scroll-anim-up {
   @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+  /* Inicialmente invisible y desplazado 10px hacia abajo */
+  /* Transición suave de todas las propiedades en 1s con easing ease-out */
 }
 .scroll-anim-up.animate {
   @apply opacity-100 translate-y-0;
+  /* Cuando se activa la clase "animate", el elemento se vuelve visible y vuelve a su posición original */
 }
 
+/* Animación desde la derecha */
 .scroll-anim-right {
   @apply opacity-0 translate-x-10 transition-all duration-1000 ease-out;
+  /* Inicialmente invisible y desplazado 10px a la derecha */
 }
 .scroll-anim-right.animate {
   @apply opacity-100 translate-x-0;
+  /* Se vuelve visible y se mueve a su posición original */
 }
 
+/* Animación desde la izquierda */
 .scroll-anim-left {
   @apply opacity-0 -translate-x-10 transition-all duration-1000 ease-out;
+  /* Inicialmente invisible y desplazado 10px a la izquierda */
 }
 .scroll-anim-left.animate {
   @apply opacity-100 translate-x-0;
+  /* Se vuelve visible y se mueve a su posición original */
 }

@@ -1,31 +1,33 @@
-import { Link } from "@inertiajs/react";
+import { Link } from "@inertiajs/react"; 
 import BotonComprarAhora from "@/Components/BotonComprarAhora";
 
+// Componente principal de la sección de contacto
 export default function Contact() {
     return (
+        // Contenedor principal centrado vertical y horizontalmente
         <div className="flex flex-col items-center justify-center w-full gap-12 py-8">
 
-            {/* Título arriba */}
+            {/* Título de la sección */}
             <h2 className="text-5xl sm:text-6xl font-bold text-white text-center">
                 Contáctanos
             </h2>
 
-            {/* Contenedor principal: imagen izquierda, redes y botón derecha */}
+            {/* Contenedor que divide la imagen y las redes sociales */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-12 w-full max-w-6xl">
 
-                {/* Imagen izquierda */}
+                {/* Columna izquierda: Imagen */}
                 <div className="w-full lg:w-1/2 flex justify-center">
                     <img
-                        src="https://res.cloudinary.com/dnbklbswg/image/upload/v1755142064/letrero_onopcw.png" // Cambia por la ruta real de tu imagen
-                        alt="El Corte Beniano"
-                        className="max-w-xs sm:max-w-sm md:max-w-md rounded-md shadow-md"
+                        src="https://res.cloudinary.com/dnbklbswg/image/upload/v1755142064/letrero_onopcw.png" // Ruta de la imagen
+                        alt="El Corte Beniano" // Texto alternativo
+                        className="max-w-xs sm:max-w-sm md:max-w-md rounded-md shadow-md" // Estilos: tamaños y sombras
                     />
                 </div>
 
-                {/* Redes y botón derecha */}
+                {/* Columna derecha: Redes sociales y botón */}
                 <div className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-6">
 
-                    {/* Botones de contacto */}
+                    {/* Botones de redes sociales */}
                     <div className="grid grid-cols-2 gap-6 text-lg w-full max-w-md">
                         <Link
                             href="#"
@@ -53,19 +55,22 @@ export default function Contact() {
                         </Link>
                     </div>
 
+                    {/* Separador */}
                     <hr className="w-full border-t border-gray-300 my-6" />
 
-                    {/* Botón de compra */}
+                    {/* Botón para comprar */}
                     <BotonComprarAhora
-                        buttonText="COMPRAR AHORA"
-                        buttonHref="/comprar"
-                        showText={true}
-                        textContent="Recibe un DESCUENTO y DELIVERY GRATIS"
-                        textColor="text-#152636"
+                        buttonText="COMPRAR AHORA" // Texto del botón
+                        buttonHref="/comprar" // Ruta de destino
+                        showText={true} // Muestra texto adicional
+                        textContent="Recibe un DESCUENTO y DELIVERY GRATIS" // Texto promocional
+                        textColor="text-#152636" // Color del texto
                     />
 
                     {/* Ubicación */}
-                    <p className="mt-4 text-white text-center text-lg">Cochabamba, Bolivia</p>
+                    <p className="mt-4 text-white text-center text-lg">
+                        Cochabamba, Bolivia
+                    </p>
                 </div>
             </div>
         </div>
