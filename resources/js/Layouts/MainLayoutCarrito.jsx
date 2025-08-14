@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "@/Components/Carrito/Header";
-import SidebarMenu from "@/Components/Carrito/SidebarMenu";
+import SidebarMenu from "@/Components/Carrito/SideBarMenu";
 
 export default function MainLayout({ children }) {
   const [menuOpen, setMenuOpen] = useState(true);
