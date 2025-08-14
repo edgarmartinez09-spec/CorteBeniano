@@ -1,13 +1,13 @@
 // Importa los componentes que se usarán en la página principal
-import EnvioGratisHeader from '@/Components/EnviogratisHeader';   // Barra superior con info de envío gratis
-import LogoConVideo from '@/Components/LogoConVideo';             // Componente que muestra un logo con un video
+import EnvioGratisHeader from '@/Components/Inicio/EnviogratisHeader';   // Barra superior con info de envío gratis
+import LogoConVideo from '@/Components/Inicio/LogoConVideo';             // Componente que muestra un logo con un video
 import RectanguloLayout from "@/Layouts/RectanguloLayout";        // Layout en forma de rectángulo con fondo personalizable
-import Porqueescoger from '@/Components/Porqueescoger';           // Sección "Por qué escoger"
-import Productoscertificados from '@/Components/Productoscertificados'; // Sección sobre certificaciones
-import Clientes from '@/Components/ClientesSatisfechos';          // Sección de clientes satisfechos
-import Comentarios from '@/Components/Comentarios';               // Testimonios o comentarios de clientes
-import Corte from '@/Components/AcercaDelCorte';                   // Información sobre cortes de carne
-import Contact from "@/Components/Contacto";                      // Sección de contacto
+import Porqueescoger from '@/Components/Inicio/Porqueescoger';           // Sección "Por qué escoger"
+import Productoscertificados from '@/Components/Inicio/Productoscertificados'; // Sección sobre certificaciones
+import Clientes from '@/Components/Inicio/ClientesSatisfechos';          // Sección de clientes satisfechos
+import Comentarios from '@/Components/Inicio/Comentarios';               // Testimonios o comentarios de clientes
+import Corte from '@/Components/Inicio/AcercaDelCorte';                   // Información sobre cortes de carne
+import Contact from "@/Components/Inicio/Contacto";                      // Sección de contacto
 
 export default function Welcome() {
     return (

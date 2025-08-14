@@ -1,5 +1,5 @@
 // Importamos el componente Reproductor que maneja el video
-import Reproductor from "@/Components/Reproductor"; // Ajusta la ruta según tu estructura de carpetas
+import Reproductor from "@/Components/Inicio/Reproductor"; // Ajusta la ruta según tu estructura de carpetas
 
 // Componente que simula un teléfono mostrando un video en su pantalla
 export default function Telefono({ videoSrc }) {

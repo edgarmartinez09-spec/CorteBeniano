@@ -1,5 +1,5 @@
-import AnimatedSection from "@/Components/Animaciones";     // Componente para animar secciones con efectos (izquierda, derecha, etc.)
-import BotonComprarAhora from "@/Components/BotonComprarAhora"; // Botón reutilizable con estilos y enlace
+import AnimatedSection from "@/Components/Inicio/Animaciones";     // Componente para animar secciones con efectos (izquierda, derecha, etc.)
+import BotonComprarAhora from "@/Components/Inicio/BotonComprarAhora"; // Botón reutilizable con estilos y enlace
 
 export default function Corte() {
     return (
@@ -52,7 +52,7 @@ export default function Corte() {
                     >
                         <BotonComprarAhora
                             buttonText="COMPRAR AHORA" // Texto en el botón
-                            buttonHref="/comprar"      // Ruta a la que redirige
+                            buttonHref="/compra"      // Ruta a la que redirige
                             showText={false}           // No muestra texto adicional debajo
                         />
                     </AnimatedSection>

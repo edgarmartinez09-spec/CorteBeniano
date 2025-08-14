@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
-import AnimatedSection from "@/Components/Animaciones";
-import Telefono from "@/Components/Telefono";
+import AnimatedSection from "@/Components/Inicio/Animaciones";
+import Telefono from "@/Components/Inicio/Telefono";
 
 export default function LogoConVideo({
     logoSrc = "https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png",

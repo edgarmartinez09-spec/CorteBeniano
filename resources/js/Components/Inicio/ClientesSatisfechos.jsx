@@ -1,6 +1,6 @@
-import BotonComprarAhora from "@/Components/BotonComprarAhora"; // Botón de compra reutilizable
-import Reproductor from "@/Components/Reproductor"; // Componente para reproducir videos
-import AnimatedSection from "@/Components/Animaciones"; // Componente para animar secciones
+import BotonComprarAhora from "@/Components/Inicio/BotonComprarAhora"; // Botón de compra reutilizable
+import Reproductor from "@/Components/Inicio/Reproductor"; // Componente para reproducir videos
+import AnimatedSection from "@/Components/Inicio/Animaciones"; // Componente para animar secciones
 
 export default function Clientes() {
   // Lista de clientes con imagen o video, nombre de usuario y color de etiqueta

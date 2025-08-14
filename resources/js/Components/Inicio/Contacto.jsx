@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/react"; 
-import BotonComprarAhora from "@/Components/BotonComprarAhora";
+import BotonComprarAhora from "@/Components/Inicio/BotonComprarAhora";
 
 // Componente principal de la sección de contacto
 export default function Contact() {
@@ -61,7 +61,7 @@ export default function Contact() {
                     {/* Botón para comprar */}
                     <BotonComprarAhora
                         buttonText="COMPRAR AHORA" // Texto del botón
-                        buttonHref="/comprar" // Ruta de destino
+                        buttonHref="/compra" // Ruta de destino
                         showText={true} // Muestra texto adicional
                         textContent="Recibe un DESCUENTO y DELIVERY GRATIS" // Texto promocional
                         textColor="text-#152636" // Color del texto

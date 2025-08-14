@@ -1,5 +1,5 @@
-import Users from '@/Components/FotosUsuarios';      // Componente que muestra foto + nombre del usuario
-import AnimatedSection from '@/Components/Animaciones'; // Componente para animar la aparición de cada tarjeta
+import Users from '@/Components/Inicio/FotosUsuarios';      // Componente que muestra foto + nombre del usuario
+import AnimatedSection from '@/Components/Inicio/Animaciones'; // Componente para animar la aparición de cada tarjeta
 
 export default function CardComentarios() {
     // Estilos reutilizables para la tarjeta y el texto

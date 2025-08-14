@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/react";
-import AnimatedSection from "@/Components/Animaciones"; 
-import Telefono from "@/Components/Telefono";
+import AnimatedSection from "@/Components/Inicio/Animaciones"; 
+import Telefono from "@/Components/Inicio/Telefono";
 
 // Componente funcional que muestra un logo con contenido adicional y un video al lado
 export default function LogoConVideo({

@@ -1,8 +1,8 @@
 // Importa el componente de tarjeta de comentarios
-import CardComentarios from '@/Components/CardDeComentarios';
+import CardComentarios from '@/Components/Inicio/CardDeComentarios';
 
 // Importa el componente para animaciones de aparición
-import AnimatedSection from '@/Components/Animaciones';
+import AnimatedSection from '@/Components/Inicio/Animaciones';
 
 // Componente principal para mostrar comentarios de clientes
 export default function Comentario() {

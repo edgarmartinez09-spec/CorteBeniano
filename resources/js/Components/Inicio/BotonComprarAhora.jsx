@@ -1,10 +1,10 @@
-import AnimatedSection from "@/Components/Animaciones"; // Componente que aplica animaciones al entrar en pantalla
+import AnimatedSection from "@/Components/Inicio/Animaciones"; // Componente que aplica animaciones al entrar en pantalla
 import { Link } from "@inertiajs/react"; // Enlaces para navegación con Inertia.js
 
 export default function AnimatedButtonWithText({
   // Props con valores por defecto
   buttonText = "COMPRA AHORA",              // Texto dentro del botón
-  buttonHref = "/comprar",                  // Enlace al que redirige el botón
+  buttonHref = "/compra",                  // Enlace al que redirige el botón
   buttonDelay = 0.8,                         // Retraso de animación del botón
   showText = true,                           // Si se muestra o no el texto debajo
   textContent = "Recibe un DESCUENTO y DELIVERY GRATIS", // Texto que aparece debajo del botón

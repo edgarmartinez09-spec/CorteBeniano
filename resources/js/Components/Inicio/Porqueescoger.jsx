@@ -1,6 +1,6 @@
 // Importamos componentes reutilizables
-import AnimatedSection from "@/Components/Animaciones"; // Componente que maneja animaciones de entrada
-import BotonComprarAhora from "@/Components/BotonComprarAhora"; // Botón personalizado con texto adicional
+import AnimatedSection from "@/Components/Inicio/Animaciones"; // Componente que maneja animaciones de entrada
+import BotonComprarAhora from "@/Components/Inicio/BotonComprarAhora"; // Botón personalizado con texto adicional
 
 // Componente principal que explica por qué elegir "El Corte Beniano"
 export default function Porqueescoger() {
@@ -64,7 +64,7 @@ export default function Porqueescoger() {
             {/* Botón de llamada a la acción */}
             <BotonComprarAhora
                 buttonText="COMPRAR AHORA"
-                buttonHref="/comprar"
+                buttonHref="/compra"
                 showText={true} // indica que se mostrará texto adicional debajo del botón
                 textContent="Recibe un DESCUENTO y DELIVERY GRATIS"
                 textColor="text-white"

@@ -1,6 +1,6 @@
 // Importamos componentes reutilizables
-import AnimatedSection from "@/Components/Animaciones"; // Componente para animaciones de entrada
-import BotonComprarAhora from "@/Components/BotonComprarAhora"; // Botón personalizado con texto adicional
+import AnimatedSection from "@/Components/Inicio/Animaciones"; // Componente para animaciones de entrada
+import BotonComprarAhora from "@/Components/Inicio/BotonComprarAhora"; // Botón personalizado con texto adicional
 
 // Componente principal que muestra productos certificados
 export default function ProductosCertificados() {
@@ -43,7 +43,7 @@ export default function ProductosCertificados() {
                     <AnimatedSection animationType="fit" delay={0.6} className="mt-4">
                         <BotonComprarAhora
                             buttonText="COMPRAR AHORA"
-                            buttonHref="/comprar"
+                            buttonHref="/compra"
                             showText={true} // Muestra texto adicional debajo del botón
                             textContent="Recibe un DESCUENTO y DELIVERY GRATIS"
                             textColor="text-#152636"
