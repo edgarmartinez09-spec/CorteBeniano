@@ -6,7 +6,7 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
                     {{-- Favicon personalizado --}}
-            <link rel="icon" href="{{ asset('logo.png') }}" type="image/png">
+            <link rel="icon" href="{{ asset('https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png') }}" type="image/png">
 
             {{-- Open Graph para redes sociales --}}
             <meta property="og:title" content="Carniceria Corte Beniano" />
