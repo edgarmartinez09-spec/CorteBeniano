@@ -5,7 +5,7 @@ import AnimatedSection from "@/Components/Animaciones";
 export default function Clientes() {
   const clientes = [
     { tipo: "img", src: "https://th.bing.com/th/id/R.0382de737893bc434c16ac0d55326c3d?rik=VTjTHaZxyqQVPw&pid=ImgRaw&r=0", user: "@pikigamarra", color: "bg-orange-500" },
-    { tipo: "video", src: "https://res.cloudinary.com/dnbklbswg/video/upload/v1754685757/video2_fzf7el.mp4", user: "@nicolásmonzón", color: "bg-pink-600" },
+    { tipo: "video", src: "https://res.cloudinary.com/dnbklbswg/video/upload/v1755141590/video-princioal_g9745j.mp4", user: "@nicolásmonzón", color: "bg-pink-600" },
     { tipo: "img", src: "https://tse2.mm.bing.net/th/id/OIP.pNhMU1obbxSztoAB5S71xAHaLH?w=600&h=900&rs=1&pid=ImgDetMain&o=7&rm=3", user: "@alvinich", color: "bg-orange-500" },
     { tipo: "img", src: "https://media.licdn.com/dms/image/D4D03AQFQ3w5ncKlP6g/profile-displayphoto-shrink_800_800/0/1665612326765?e=2147483647&v=beta&t=8XrNZRWX5a48kpS5NiIlqA9gPlemEGf8frktIk5zxxs", user: "@diegolas", color: "bg-orange-500" },
   ];
