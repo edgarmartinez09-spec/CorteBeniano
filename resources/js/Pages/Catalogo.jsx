@@ -1,0 +1,71 @@
+import MainLayout from "@/Layouts/MainLayoutCatalogo";
+
+export default function Catalogo({ categorias = [], sales = [], yahuas_chimichurris = [], carbones = [] }) {
+    console.log("Cantidad de categorías recibidas:", categorias.length);
+
+    // Asignar productos extras a la categoría existente "Extras"
+    const todasCategorias = categorias.map(categoria => {
+        if (categoria.nombre.toLowerCase() === "extras") {
+            return {
+                ...categoria,
+                productos: [
+                    ...sales,
+                    ...yahuas_chimichurris,
+                    ...carbones
+                ]
+            };
+        }
+        return categoria;
+    });
+
+    // Mostrar info en consola
+    todasCategorias.forEach((categoria, index) => {
+        console.log(`Categoría ${index + 1} (${categoria.nombre}) tiene ${categoria.productos?.length || 0} productos`);
+    });
+
+    return (
+        <MainLayout categorias={todasCategorias}>
+            <div className="max-w-6xl mx-auto space-y-10 px-4">
+                {todasCategorias.map(categoria => (
+                    <div
+                        key={`${categoria.nombre}-${categoria.id || categoria.nombre}`}
+                        className="bg-white rounded-2xl border-2 border-gray-500 shadow-lg p-6  space-y-6"
+                    >
+                        <h2 className="text-2xl sm:text-3xl font-bold text-center text-red-700">
+                            {categoria.nombre}
+                        </h2>
+
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
+                            {categoria.productos?.map(producto => (
+                                <div
+                                    key={`${producto.id}-${categoria.nombre}-${producto.nombre}`}
+                                    className="bg-gray-50 rounded-xl shadow-md overflow-hidden w-36 sm:w-40 hover:shadow-lg transition-shadow duration-300"
+                                >
+                                    <a
+                                        href={`/producto/${producto.id}`}
+                                        className="w-full h-36 sm:h-40 overflow-hidden flex items-center justify-center hover:scale-105 transition-transform duration-300"
+                                    >
+                                        <img
+                                            src={producto.imagen}
+                                            alt={producto.nombre}
+                                            className="object-contain w-full h-full"
+                                        />
+                                    </a>
+                                    <div className="p-2 text-center">
+                                        <h3 className="text-sm sm:text-base font-semibold text-red-700 truncate">
+                                            {producto.nombre}
+                                        </h3>
+                                        <p className="text-gray-700 text-xs sm:text-sm">
+                                            {producto.precio} Bs / {producto.peso} kg
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                    </div>
+                ))}
+            </div>
+        </MainLayout>
+    );
+}

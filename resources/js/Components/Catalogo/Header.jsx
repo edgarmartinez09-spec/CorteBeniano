@@ -27,12 +27,14 @@ export default function Header({ menuOpen, onMenuToggle }) {
         {menuButtonAnimations.open.map((anim, i) => (
           <motion.span
             key={i}
-            className="block w-8 h-[2px] bg-gray-800 rounded-full origin-center md:w-10 md:h-[3px]"
+            className="block w-8 h-[2px]  bg-gray-800 rounded-full origin-center md:w-10 md:h-[3px]"
             animate={menuOpen ? anim : menuButtonAnimations.closed[i]}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           />
         ))}
       </button>
+
+        
 
       {/* Íconos lupa y bolso */}
       <div className="flex items-center gap-4 md:gap-6">
