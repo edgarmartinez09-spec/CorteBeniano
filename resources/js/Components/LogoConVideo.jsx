@@ -2,7 +2,13 @@ import { Link } from "@inertiajs/react";
 import AnimatedSection from "@/Components/Animaciones"; 
 import Telefono from "@/Components/Telefono";
 
-export default function LogoConVideo({ logoSrc, children, linkHref = "/compra", linkText = "COMPRA AHORA" }) {
+export default function LogoConVideo({
+    logoSrc,
+    children,
+    linkHref = "/compra",
+    linkText = "COMPRA AHORA",
+    videoSrc // 📌 Nueva prop para el video
+}) {
     return (
         <>
             {/* IZQUIERDA */}
@@ -16,7 +22,7 @@ export default function LogoConVideo({ logoSrc, children, linkHref = "/compra", 
                     className="w-full max-w-[360px] sm:max-w-[450px] md:max-w-[500px] h-auto"
                 />
 
-                {/* Aquí renderizamos cualquier contenido que nos pasen */}
+                {/* Contenido que venga por children */}
                 {children}
 
                 <Link
@@ -34,7 +40,8 @@ export default function LogoConVideo({ logoSrc, children, linkHref = "/compra", 
                 animationType="up"
                 className="w-full md:w-1/2 flex items-center justify-center text-center space-y-4 md:space-y-6"
             >
-                <Telefono />
+                {/* 📌 Ahora el video viene como prop */}
+                <Telefono videoSrc={videoSrc} />
             </AnimatedSection>
         </>
     );

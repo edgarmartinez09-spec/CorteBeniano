@@ -3,16 +3,16 @@ import BotonComprarAhora from "@/Components/BotonComprarAhora";
 
 export default function Porqueescoger() {
     const logosArriba = [
-        {
-            src: "/images/logo-izquierda.png",
+        { 
+            src: "https://res.cloudinary.com/dnbklbswg/image/upload/v1755141898/logo-izquierda_djraar.png",
             descripcion: "Ahorra tiempo evitando largas filas, pide de manera sencilla, segura y rápida de manera online. ¡Puedes hacer tu pedido en menos de 1 minuto!"
         },
         {
-            src: "/images/logo-medio.png",
+            src: "https://res.cloudinary.com/dnbklbswg/image/upload/v1755141898/logo-medio_ayndqk.png",
             descripcion: "Nuestros productos son previamente seleccionados y ellos provienen del mejor ganado que existe en Bolivia: Brangus & Nelore."
         },
         {
-            src: "/images/logo-derechas.png",
+            src: "https://res.cloudinary.com/dnbklbswg/image/upload/v1755141898/logo-derechas_afq059.png",
             descripcion: "Con nuestras promociones y precios sumamente competitivos, te ahorraremos mucho dinero. Tenemos la mejor relación calidad-precio del mercado."
         },
     ];

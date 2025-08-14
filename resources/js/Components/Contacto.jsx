@@ -16,7 +16,7 @@ export default function Contact() {
                 {/* Imagen izquierda */}
                 <div className="w-full lg:w-1/2 flex justify-center">
                     <img
-                        src="/images/letrero.png" // Cambia por la ruta real de tu imagen
+                        src="https://res.cloudinary.com/dnbklbswg/image/upload/v1755142064/letrero_onopcw.png" // Cambia por la ruta real de tu imagen
                         alt="El Corte Beniano"
                         className="max-w-xs sm:max-w-sm md:max-w-md rounded-md shadow-md"
                     />
