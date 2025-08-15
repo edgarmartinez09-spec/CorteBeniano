@@ -11,9 +11,10 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev \
     libxml2-dev \
+    libpq-dev \   # <-- Necesario para PostgreSQL
     zip \
     curl \
-    && docker-php-ext-install pdo pdo_mysql zip mbstring xml gd \
+    && docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql zip mbstring xml gd \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Instalar Node.js 20 LTS y npm
