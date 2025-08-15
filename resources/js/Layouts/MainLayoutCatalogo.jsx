@@ -74,19 +74,12 @@ export default function MainLayout({ children, categorias }) {
           }}
           transition={{ type: "tween", duration: 0.4 }}
         >
-          {children ? (
-            children
-          ) : (
-            <>
-              <h1 className="text-2xl pt-10 font-bold">Contenido principal</h1>
-              <p>Aquí va tu contenido...</p>
-            </>
-          )}
+        {children}
         </motion.main>
 
         {/* Botón WhatsApp */}
         <a
-          href="https://wa.me/59165359695"
+          href="https://wa.me/59165770639"
           target="_blank"
           className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
         >

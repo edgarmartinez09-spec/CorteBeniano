@@ -4,9 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
   const [categoriesOpen, setCategoriesOpen] = useState(true);
-
-  // Para cerrar el sidebar al hacer scroll o redimensionar en desktop
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -15,16 +14,15 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
 
   return (
     <>
-    
       {/* Overlay para móviles */}
       <AnimatePresence>
         {menuOpen && windowWidth < 768 && (
           <motion.div
-            className="fixed inset-0  bg-black bg-opacity-40 z-40"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onMenuClose} // cerrar al tocar overlay
+            onClick={onMenuClose}
           />
         )}
       </AnimatePresence>
@@ -34,14 +32,14 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
         initial={{ x: "-100%" }}
         animate={{ x: menuOpen ? 0 : "-100%" }}
         transition={{ type: "tween", duration: 0.4 }}
-        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 overflow-auto 
-          w-full md:w-72`}
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 overflow-y-auto 
+          ${windowWidth < 768 ? "w-4/5 max-w-xs" : "w-72"}`}
       >
         {/* Navegación */}
-        <nav className="flex flex-col p-4 pt-20 gap-2 flex-1">
+        <nav className="flex flex-col p-4 pt-16 gap-2">
           <a
             href="/"
-            className="py-2 px-2 rounded hover:bg-gray-200 transition-colors"
+            className="py-3 px-2 text-lg rounded hover:bg-gray-200 transition-colors"
             onClick={onMenuClose}
           >
             Inicio
@@ -50,18 +48,17 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
           {/* Botón Categorías */}
           <button
             onClick={() => setCategoriesOpen(!categoriesOpen)}
-            className="flex justify-between items-center w-full py-2 px-2 text-left rounded hover:bg-gray-200 transition-colors focus:outline-none"
+            className="flex justify-between items-center w-full py-3 px-2 text-lg rounded hover:bg-gray-200 transition-colors focus:outline-none"
           >
-            <span className="flex-1">{/* texto ocupa todo el espacio */}Categorías</span>
+            <span className="flex-1">Categorías</span>
             <motion.span
-              className="flex-shrink-0" // evita que se achique
+              className="flex-shrink-0"
               animate={{ rotate: categoriesOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <FaChevronDown size={18} /> {/* tamaño fijo para que se vea bien */}
+              <FaChevronDown size={18} />
             </motion.span>
           </button>
-
 
           {/* Subcategorías */}
           <AnimatePresence>
@@ -77,7 +74,7 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
                   <a
                     key={cat.id}
                     href={`#categoria-${cat.id}`}
-                    className="py-1 px-2 rounded hover:bg-gray-200 transition-colors"
+                    className="py-2 px-2 text-base rounded hover:bg-gray-200 transition-colors"
                     onClick={onMenuClose}
                   >
                     {cat.nombre}
@@ -94,19 +91,19 @@ export default function SidebarMenu({ menuOpen, onMenuClose, categorias }) {
           <div className="flex flex-col gap-2 mt-auto">
             <a
               href="#"
-              className="flex items-center gap-2 py-2 px-2 rounded hover:bg-gray-200 transition-colors"
+              className="flex items-center gap-2 py-2 px-2 text-base rounded hover:bg-gray-200 transition-colors"
             >
               <FaFacebookF /> Facebook
             </a>
             <a
               href="#"
-              className="flex items-center gap-2 py-2 px-2 rounded hover:bg-gray-200 transition-colors"
+              className="flex items-center gap-2 py-2 px-2 text-base rounded hover:bg-gray-200 transition-colors"
             >
               <FaInstagram /> Instagram
             </a>
             <a
               href="#"
-              className="flex items-center gap-2 py-2 px-2 rounded hover:bg-gray-200 transition-colors"
+              className="flex items-center gap-2 py-2 px-2 text-base rounded hover:bg-gray-200 transition-colors"
             >
               <FaShareAlt /> Compartir
             </a>

@@ -15,8 +15,8 @@
         <!-- ===========================
              Meta Open Graph para redes sociales
              =========================== -->
-        <meta property="og:title" content="Carniceria Corte Beniano" />
-        <meta property="og:description" content="Cortes de Calidad Hechos Con Amor" />
+        <meta property="og:title" content="Corte Beniano" />
+        <meta property="og:description" content="Cortes de Calidad " />
         <meta property="og:image" content="{{ asset('https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png') }}" />
         <meta property="og:url" content="{{ url('/') }}" />
         <meta property="og:type" content="website" />

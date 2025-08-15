@@ -19,7 +19,7 @@ export default function Welcome() {
             <RectanguloLayout background="#f0efef">
                 <LogoConVideo
                     logoSrc="https://res.cloudinary.com/dnbklbswg/image/upload/v1755121029/logo_esb5wx.png"
-                    videoSrc="https://res.cloudinary.com/dnbklbswg/video/upload/v1755141590/video-princioal_g9745j.mp4"
+                    videoSrc="https://res.cloudinary.com/dnbklbswg/video/upload/v1755141576/video_de_carga_ye2f1c.mp4"
                 >
                     {/* Texto descriptivo debajo del logo y video */}
                     <p className="text-lg sm:text-xl md:text-[30px] font-montserrat text-gray-800 leading-snug sm:leading-tight max-w-[600px] mx-auto">
