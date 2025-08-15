@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libfreetype6-dev \
     libxml2-dev \
-    libpq-dev \   # <-- Necesario para PostgreSQL
+    libpq-dev \
     zip \
     curl \
     && docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql zip mbstring xml gd \
