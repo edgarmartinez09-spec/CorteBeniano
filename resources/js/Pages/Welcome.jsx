@@ -23,7 +23,7 @@ export default function Welcome() {
                 >
                     {/* Texto descriptivo debajo del logo y video */}
                     <p className="text-lg sm:text-xl md:text-[30px] font-montserrat text-gray-800 leading-snug sm:leading-tight max-w-[600px] mx-auto">
-                         que buena pagina desde<br />
+                         Compra la mejor carne desde<br />
                         casa de manera sencilla, rápida y segura<br />
                         en <span className="font-bold">Cochabamba, Bolivia.</span>
                     </p>
